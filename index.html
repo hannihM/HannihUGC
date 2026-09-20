@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hannih.dev | Creative Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter, Alex Brush, Great Vibes & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Social and Software Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .font-sans {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-signature {
+            font-family: 'Alex Brush', cursive;
+        }
+        .font-cursive-title {
+            font-family: 'Great Vibes', 'Alex Brush', cursive;
+        }
+
+        /* Glassmorphism & Visual Glow Effects */
+        .glass-pill {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .glass-card {
+            background: rgba(255, 240, 245, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        /* Ambient Background Image setup for Hero */
+        .bg-setup {
+            background-image: linear-gradient(rgba(18, 16, 22, 0.35), rgba(18, 16, 22, 0.45)), 
+                              url('https://images.unsplash.com/photo-1598257006458-087169a1f08d?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Ambient Background Image setup for Thank You Section */
+        .bg-thankyou {
+            background-image: linear-gradient(rgba(18, 16, 22, 0.45), rgba(18, 16, 22, 0.55)), 
+                              url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Soft text shadows for clean legibility against background */
+        .text-glow {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .text-signature-glow {
+            text-shadow: 0 4px 20px rgba(255, 182, 193, 0.6), 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        .text-thankyou-glow {
+            text-shadow: 0 4px 15px rgba(253, 224, 71, 0.4), 0 0 10px rgba(255, 255, 255, 0.9);
+        }
+
+        /* Section 2 Pink Color Tone */
+        .bg-pastel-pink {
+            background-color: #fceef3;
+        }
+
+        .text-rose-brown {
+            color: #8c4a5c;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fceef3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(230, 150, 175, 0.6);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white font-sans overflow-x-hidden w-screen relative select-none">
+
+    <!-- SECTION 1: HERO -->
+    <section class="h-screen w-full relative flex flex-col justify-between p-6 md:p-10 bg-setup bg-center bg-cover">
+        <div class="absolute inset-0 bg-radial from-transparent via-black/20 to-black/60 pointer-events-none"></div>
+
+        <!-- TOP NAVIGATION BANNER -->
+        <header class="relative z-10 w-full pt-2">
+            <nav class="flex flex-wrap items-center justify-center md:justify-between max-w-7xl mx-auto gap-4 md:gap-6 text-sm sm:text-base md:text-lg font-medium text-white/90 tracking-wide text-glow">
+                <a href="#impact" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">creative direction</a>
+                <a href="#freelance" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">graphic design</a>
+                <a href="#freelance" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">ugc</a>
+                <a href="#freelance" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">content creation</a>
+                <a href="#freelance" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">web development</a>
+            </nav>
+        </header>
+
+
+        <!-- BOTTOM FOOTER & CHAT WIDGET BAR -->
+        <footer class="relative z-10 w-full flex flex-col md:flex-row justify-between gap-6 pb-2">
+            <div class="flex flex-wrap items-center gap-6 sm:gap-8 text-sm sm:text-base font-medium text-white/90 text-glow">
+                <a href="mailto:sindudziwa@gmail.com" target="_blank" class="flex items-center gap-2 hover:text-pink-200 transition-colors">
+                    <i class="fa-solid fa-envelope text-lg"></i>
+                    <span>@hannih.dev</span>
+                </a>
+                <a href="https://instagram.com/hannih.dev" target="_blank" class="flex items-center gap-2 hover:text-pink-200 transition-colors">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                    <span>instagram</span>
+                </a>
+                <a href="https://tiktok.com/@hannih.dev" target="_blank" class="flex items-center gap-2 hover:text-pink-200 transition-colors">
+                    <i class="fa-brands fa-tiktok text-lg"></i>
+                    <span>tiktok</span>
+                </a>
+            </div>
+
+            <div class="flex flex-col items-end gap-1.5 self-end md:self-auto">
+                <div class="text-xs sm:text-sm text-pink-100/90 font-medium tracking-wide flex items-center gap-1 pr-1 text-glow">
+                    <span>hannih</span>
+                    <span class="text-pink-400">💕</span>
+                    <span class="opacity-80">@hannih.dev</span>
+                </div>
+
+                <button onclick="openContactModal()" class="glass-pill text-pink-950 font-medium px-5 py-2.5 rounded-full shadow-lg flex items-center gap-3 hover:bg-white hover:scale-105 active:scale-95 transition-all duration-300 border border-white/60 group">
+                    <div class="w-6 h-6 rounded-full overflow-hidden border border-pink-300/80 shadow-sm flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop" alt="hannih avatar" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-sm sm:text-base tracking-tight font-normal text-pink-950 group-hover:text-pink-900">
+                        send me a message &lt;3
+                    </span>
+                </button>
+            </div>
+        </footer>
+
+        <a href="#about" class="absolute bottom-3 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors animate-bounce z-10 hidden md:block">
+            <i class="fa-solid fa-chevron-down text-lg"></i>
+        </a>
+    </section>
+
+    <!-- SECTION 2: ABOUT ME -->
+    <section id="about" class="min-h-screen w-full bg-pastel-pink text-rose-brown px-6 py-10 md:px-16 md:py-16 flex flex-col justify-between relative">
+        <div class="w-full max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm font-medium border-b border-rose-brown/15 pb-4 mb-8 sm:mb-12">
+
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                <a href="https://instagram.com/hannih.dev" target="_blank" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                    <i class="fa-brands fa-instagram text-pink-600"></i>
+                    <span>hannih.dev</span>
+                </a>
+                <a href="https://tiktok.com/@hannih.dev" target="_blank" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                    <i class="fa-brands fa-tiktok text-pink-600"></i>
+                    <span>hannih.dev</span>
+                </a>
+                <a href="https://linkedin.com/in/hanmngoli" target="_blank" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                    <i class="fa-brands fa-linkedin text-pink-600"></i>
+                    <span>hannih</span>
+                </a>
+                <a href="mailto:sindudziwa@gmail.com" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                    <i class="fa-regular fa-envelope text-pink-600"></i>
+                    <span>hannih</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-1.5 opacity-90">
+                <i class="fa-solid fa-location-dot text-pink-600"></i>
+                <span>Mchinji, Malawi</span>
+            </div>
+        </div>
+
+        <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center flex-1 my-auto">
+            <div class="lg:col-span-6 flex flex-col justify-center space-y-6 sm:space-y-8 pr-0 lg:pr-6">
+                <div>
+                    <h2 class="font-cursive-title text-6xl sm:text-7xl md:text-8xl text-pink-500 font-normal leading-none tracking-tight">
+                        About Me
+                    </h2>
+                </div>
+
+                <div class="space-y-6 text-gray-800 text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-snug">
+                    <p id="about-p1" class="text-rose-brown">
+                        i blend structural rigor with creative thinking to build content systems that genuinely work for each brand.
+                    </p>
+                    <p id="about-p2" class="text-rose-brown">
+                        i craft the brief, develop clear, well-defined concepts, and handle both filming and editing—always with one objective in mind: producing content that drives conversions.
+                    </p>
+                </div>
+
+            </div>
+                <div class="lg:col-span-6 relative flex flex-col items-center justify-center pt-6 lg:pt-0">
+                <div class="relative w-full max-w-xl h-[380px] sm:h-[460px] md:h-[520px] flex items-center justify-center">
+                    <div class="absolute left-0 bottom-2 sm:bottom-4 w-[62%] sm:w-[60%] h-[82%] sm:h-[88%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/60 transform -rotate-3 hover:rotate-0 transition-all duration-500 z-10 hover:z-30">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Hannah at laptop" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-purple-900/10 mix-blend-multiply"></div>
+                    </div>
+
+                    <div class="absolute right-0 top-0 w-[60%] sm:w-[58%] h-[82%] sm:h-[88%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 transform rotate-3 hover:rotate-0 transition-all duration-500 z-20">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Desk setup with laptop and design tools" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="w-full flex items-center justify-center gap-5 sm:gap-8 mt-6 sm:mt-10 text-rose-brown/80">
+                    <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-white/70 shadow-sm border border-rose-brown/20 flex items-center justify-center text-xl sm:text-2xl font-bold hover:scale-110 hover:bg-white transition-all cursor-pointer" title="Notion">
+                        <span class="font-serif">N</span>
+                    </div>
+                    <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-white/70 shadow-sm border border-rose-brown/20 flex items-center justify-center text-xl sm:text-2xl hover:scale-110 hover:bg-white transition-all cursor-pointer" title="Canva">
+                        <i class="fa-solid fa-pen-nib text-lg"></i>
+                    </div>
+                    <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-white/70 shadow-sm border border-rose-brown/20 flex items-center justify-center text-base sm:text-lg font-bold tracking-tighter hover:scale-110 hover:bg-white transition-all cursor-pointer" title="Web Design & Development">
+                        <i class="fa-solid fa-terminal text-lg"></i>
+                    </div>
+                    <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-white/70 shadow-sm border border-rose-brown/20 flex items-center justify-center text-base sm:text-lg font-bold tracking-tighter hover:scale-110 hover:bg-white transition-all cursor-pointer" title="Embedded Programming">
+                        <i class="fa-solid fa-microchip text-lg"></i>
+                    </div>
+                    <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-white/70 shadow-sm border border-rose-brown/20 flex items-center justify-center text-lg sm:text-xl hover:scale-110 hover:bg-white transition-all cursor-pointer" title="Video Editing">
+                        <i class="fa-solid fa-film text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: IMPACT BANNER -->
+    <section id="impact" class="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center p-6 sm:p-12" style="background-image: linear-gradient(rgba(10, 8, 12, 0.65), rgba(10, 8, 12, 0.65)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop');">
+        <div class="max-w-5xl mx-auto text-center flex flex-col items-center justify-center space-y-4 md:space-y-6">
+            <h2 class="text-4xl sm:text-6xl md:text-7xl font-bold text-yellow-50/95 tracking-tight leading-[1.1] max-w-4xl text-glow">
+                aesthetic &amp; organic ugc content that attracts and makes an impact
+            </h2>
+        </div>
+    </section>
+
+    <!-- SECTION 4: TECH + TRAVEL FREELANCERS -->
+    <section id="freelance" class="min-h-screen w-full bg-[#FFF8D5] text-white px-6 py-16 md:px-16 md:py-24 flex items-center justify-center">
+        <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <h2 class="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-800 tracking-tight leading-none">
+                    tech ugc
+                </h2>
+                <p class="font-bold text-gray-800 tracking-tight leading-none">
+                    I create content for tech and travel brands that is both visually appealing and highly effective in driving engagement and conversions. my work is tailored to each brand's unique identity, ensuring that every piece of content resonates with the target audience.
+                </p>
+            </div>
+
+            <div class="lg:col-span-7 flex flex-col gap-4">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="visuals/productDemo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="visuals/memeStyle.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="visuals/talkingHead.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="visuals/ditl.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3 sm:gap-4">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="visuals/humor.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="visuals/meme.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="visuals/funny.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: THANK YOU FOOTER -->
+    <section id="thank-you" class="h-screen w-full relative flex flex-col justify-between p-6 md:p-10 bg-thankyou bg-center bg-cover">
+        <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
+
+        <!-- UPPER TOP ROW: Thank You Cursive Script (Left) & Chat Pill Widget (Center-Right) -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto flex-1 flex flex-col justify-center items-start pt-8">
+            
+            <div class="w-full flex flex-col md:flex-row items-center justify-between gap-8">
+                
+                <!-- "Thank You" Calligraphy Title -->
+                <div class="text-left transform -rotate-6 hover:scale-105 transition-transform duration-300">
+                    <h2 class="font-signature text-7xl sm:text-9xl md:text-[11rem] text-yellow-100 font-normal leading-none text-thankyou-glow">
+                        Thank<br><span class="pl-8 sm:pl-16">You</span>
+                    </h2>
+                </div>
+
+                <!-- Call to Action Chat Bubble & Handles -->
+                <div class="flex flex-col items-center md:items-start space-y-4">
+                    <div class="text-xs sm:text-sm text-pink-100/90 font-medium tracking-wide flex items-center gap-1.5 text-glow">
+                        <span>hannih</span>
+                        <span class="text-pink-400">💕</span>
+                        <span class="opacity-90">@hannih.dev</span>
+                    </div>
+
+                    <!-- Interactive Message Pill Button -->
+                    <button onclick="openContactModal()" class="glass-pill bg-pink-200/90 text-pink-950 font-medium px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 hover:bg-white hover:scale-105 active:scale-95 transition-all duration-300 border border-white/80 group">
+                        <div class="w-7 h-7 rounded-full overflow-hidden border border-pink-300 shadow-sm flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop" alt="hannih avatar" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-base sm:text-lg tracking-tight font-medium text-pink-950 group-hover:text-pink-900">
+                            let's work toghether!
+                        </span>
+                    </button>
+
+                    <!-- Mid Handles -->
+                    <div class="pt-2 flex flex-col items-center md:items-start text-white text-glow space-y-1">
+                        <a href="#about" class="text-lg font-bold hover:text-pink-200 transition-colors">
+                            @hannih.dev
+                        </a>
+                        <div class="flex items-center gap-4 text-sm font-medium text-white/90">
+                            <a href="https://instagram.com" target="_blank" class="flex items-center gap-1.5 hover:text-pink-200 transition-colors">
+                                <i class="fa-brands fa-instagram text-base"></i>
+                                <span>instagram</span>
+                            </a>
+                            <a href="https://tiktok.com" target="_blank" class="flex items-center gap-1.5 hover:text-pink-200 transition-colors">
+                                <i class="fa-brands fa-tiktok text-base"></i>
+                                <span>tiktok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BOTTOM NAV BAR (Replaces "ai generated content" with "web development") -->
+        <footer class="relative z-10 w-full pt-6 border-t border-white/20">
+            <nav class="flex flex-wrap items-center justify-center md:justify-between max-w-7xl mx-auto gap-4 md:gap-6 text-sm sm:text-base md:text-lg font-medium text-white/90 tracking-wide text-glow">
+                <a href="#impact" onclick="showCategory('Creative Direction')" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">creative direction</a>
+                <a href="#freelance" onclick="showCategory('Graphic Design')" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">graphic design</a>
+                <a href="#freelance" onclick="showCategory('UGC')" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">ugc</a>
+                <a href="#freelance" onclick="showCategory('Content Creation')" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer">content creation</a>
+                <a href="#thank-you" onclick="showCategory('Web Development')" class="hover:text-pink-200 transition-colors duration-200 cursor-pointer text-pink-100 font-semibold border-b-2 border-pink-300/60 pb-0.5">web development</a>
+            </nav>
+        </footer>
+    </section>
+
+    <!-- INTERACTIVE CONTACT / MESSAGE MODAL -->
+    <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-card w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl text-gray-800 border border-white/80 transform scale-95 transition-transform duration-300 relative" id="modalCard">
+            
+            <button onclick="closeContactModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/60 hover:bg-white text-gray-600 flex items-center justify-center transition-all">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-pink-300 shadow">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop" alt="hannih avatar" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-gray-900 flex items-center gap-1.5">
+                        Hannah Mngoli <span class="text-pink-500 text-sm">💕</span>
+                    </h3>
+                    <p class="text-xs text-gray-500 font-medium">@hannih.dev • Web Development &amp; Design</p>
+                </div>
+            </div>
+
+            <form id="messageForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Your Name</label>
+                    <input type="text" required placeholder="How should I call you?" class="w-full px-4 py-2.5 rounded-xl bg-white/70 border border-pink-200 focus:border-pink-400 focus:bg-white focus:outline-none text-sm text-gray-800 transition-all">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Your Email</label>
+                    <input type="email" required placeholder="hello@example.com" class="w-full px-4 py-2.5 rounded-xl bg-white/70 border border-pink-200 focus:border-pink-400 focus:bg-white focus:outline-none text-sm text-gray-800 transition-all">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Message</label>
+                    <textarea rows="3" required placeholder="Tell me about your project or idea..." class="w-full px-4 py-2.5 rounded-xl bg-white/70 border border-pink-200 focus:border-pink-400 focus:bg-white focus:outline-none text-sm text-gray-800 transition-all resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-pink-400 hover:bg-pink-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-sm tracking-wide">
+                    Send Message 💕
+                </button>
+            </form>
+
+            <div id="successState" class="hidden text-center py-8 space-y-3">
+                <div class="w-12 h-12 bg-pink-100 text-pink-500 rounded-full flex items-center justify-center mx-auto text-xl">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 text-lg">Message Sent!</h4>
+                <p class="text-sm text-gray-600">Thanks for reaching out! I'll get back to you at sindudziwa@gmail.com soon.</p>
+                <button onclick="closeContactModal()" class="mt-4 px-6 py-2 bg-gray-900 text-white text-xs font-medium rounded-lg">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENERAL NOTIFICATION TOAST -->
+    <div id="toast" class="fixed top-6 right-6 z-50 glass-card px-5 py-3 rounded-2xl shadow-xl text-gray-800 text-sm font-medium flex items-center gap-3 transform translate-y-[-100px] opacity-0 transition-all duration-300">
+        <i class="fa-solid fa-sparkles text-pink-500"></i>
+        <span id="toastMessage">Category selected</span>
+    </div>
+
+    <script>
+        function openContactModal() {
+            const modal = document.getElementById('contactModal');
+            const card = document.getElementById('modalCard');
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modal.classList.add('opacity-100');
+            card.classList.remove('scale-95');
+            card.classList.add('scale-100');
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById('contactModal');
+            const card = document.getElementById('modalCard');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+
+            setTimeout(() => {
+                document.getElementById('messageForm').classList.remove('hidden');
+                document.getElementById('successState').classList.add('hidden');
+                document.getElementById('messageForm').reset();
+            }, 300);
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('messageForm').classList.add('hidden');
+            document.getElementById('successState').classList.remove('hidden');
+        }
+
+        function showCategory(name) {
+            showToast(`Browsing ${name} showcase`);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toastMessage');
+            msgEl.textContent = message;
+            toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-[-100px]', 'opacity-0');
+            }, 2500);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeContactModal();
+        });
+    </script>
+</body>
+</html>
